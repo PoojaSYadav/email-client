@@ -8,7 +8,7 @@ import { EmailService } from '../email.service';
   styleUrls: ['./email.component.css']
 })
 export class EmailComponent implements OnInit {
-  emails : Email[]; //By default load Input folder emails
+  emails : Email[]; 
   selectedFolder : string; 
   selectedEmail : Email;
   inputUnreadCount: number;
@@ -51,6 +51,7 @@ export class EmailComponent implements OnInit {
                       break; 
                     } 
     } 
+     this.selectedEmail = this.emails[0];
   }
 
   displayContent(content: Email, index: number): void{

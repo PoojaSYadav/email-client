@@ -1,0 +1,88 @@
+.sidenav , .emailList{
+    height: 100%;    
+    position: fixed;    
+    top: 0;
+    left: 0;    
+    overflow-x: hidden;
+    padding-top: 20px;
+    color: #000000;       
+  }
+
+  .sidenav{
+    width: 160px;
+    background-color: #f9f7f7c0;
+    z-index: 1;
+    border-right: 1px solid #808080;
+  }
+    
+  .emailList {
+    margin-left: 160px; 
+    font-size: 16px; 
+    padding-left: 1px;
+    width: 200px;
+    background-color: #ffffff;
+    border-right: 1px solid #808080;
+  }
+
+  .sidenav a, .emailList a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #000000;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    background-color: #e9f5f7c0;
+  }
+
+  .sidenav .selected {
+      background-color: #b7b9b9c0;
+  }
+    
+  .emailContainer{
+    margin-left: 400px; 
+    font-size: 16px; 
+    padding: 0px 10px;
+  }
+
+.emails{
+  border: 1px solid #cac3c3;
+}
+
+.emails h5{
+  margin: 0px;
+}
+
+.emails a:hover {
+  background-color: #e9f5f7c0;
+  border-left: 5px solid #b5edf7c0;
+}
+
+.emails .selected {
+  background-color: #d6f6fbc0;
+  border-style: dotted;
+}
+
+.emails .unread{
+  border-left: 5px solid #0479ea;
+}
+
+.emails .minicontent{
+  font-size: 10px;
+  white-space: nowrap;
+  height: 1em;  
+}
+.emails .fa{
+  float: right;
+}
+
+.emails .textRed { 
+  color: red;
+}
+
+.unreadCount{
+  float: right;
+  color: #0479ea;
+  font-weight: bold;
+}

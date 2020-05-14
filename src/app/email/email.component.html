@@ -1,0 +1,25 @@
+
+<div class="sidenav">
+    <a (click)="onClick('inbox')" [class.selected]="selectedFolder === 'inbox'">Inbox <span class="unreadCount" *ngIf="inputUnreadCount > 0">{{inputUnreadCount}}</span></a>
+    <a (click)="onClick('spam')" [class.selected]="selectedFolder === 'spam'">Spam <span class="unreadCount"  *ngIf="spamUnreadCount > 0">{{spamUnreadCount}}</span></a>
+    <a (click)="onClick('deleted')" [class.selected]="selectedFolder === 'delete'">Deleted Items <span class="unreadCount"  *ngIf="deleteUnreadCount > 0">{{deleteUnreadCount}}</span></a>
+    <a (click)="onClick('custom')" [class.selected]="selectedFolder === 'custom'">Custom Folder  <span class="unreadCount"  *ngIf="customUnreadCount > 0">{{customUnreadCount}}</span></a>
+</div>
+
+<div class="emailList">  
+    <div *ngFor="let email of emails;let i = index" class="emails">                 
+        <a (click)="displayContent(email, i)" [ngClass]="{'selected' : email.mId === selectedEmail.mId, 'unread' : email.unread}"> 
+            <h5> 
+                <span [ngClass]="{'textRed': email.flagged}">{{email.subject}}</span>
+                <i class="fa" [ngClass]="{'fa-flag textRed': email.flagged , 'fa-flag-o' : !email.flagged}" aria-hidden="true" (click)="flagEmail(email)"></i>
+            </h5>
+            <p class="minicontent" [innerHTML]="email.content"></p>
+        </a>  
+    </div>
+</div>
+
+<div class="emailContainer" *ngIf="selectedEmail"> 
+    <h3 [innerHTML]= "selectedEmail.subject"></h3>          
+    <div [innerHTML]="selectedEmail.content"></div>
+</div>
+

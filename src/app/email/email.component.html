@@ -2,7 +2,7 @@
 <div class="sidenav">
     <a (click)="onClick('inbox')" [class.selected]="selectedFolder === 'inbox'">Inbox <span class="unreadCount" *ngIf="inputUnreadCount > 0">{{inputUnreadCount}}</span></a>
     <a (click)="onClick('spam')" [class.selected]="selectedFolder === 'spam'">Spam <span class="unreadCount"  *ngIf="spamUnreadCount > 0">{{spamUnreadCount}}</span></a>
-    <a (click)="onClick('deleted')" [class.selected]="selectedFolder === 'delete'">Deleted Items <span class="unreadCount"  *ngIf="deleteUnreadCount > 0">{{deleteUnreadCount}}</span></a>
+    <a (click)="onClick('delete')" [class.selected]="selectedFolder === 'delete'">Deleted Items <span class="unreadCount"  *ngIf="deleteUnreadCount > 0">{{deleteUnreadCount}}</span></a>
     <a (click)="onClick('custom')" [class.selected]="selectedFolder === 'custom'">Custom Folder  <span class="unreadCount"  *ngIf="customUnreadCount > 0">{{customUnreadCount}}</span></a>
 </div>
 
